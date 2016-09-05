@@ -1,3 +1,3 @@
-# Java Pre-Work
+# Java Car Dealership
 
-This is a repository for all the little programs in the pre-class homework for Java.
+Java program for a car dealership, following along with lessons at LearnHowToProgram.com/java
