@@ -12,7 +12,7 @@ public class App {
 
     Vehicle[] allVehicles = {hatchback, suv, sedan, truck, crossover};
     System.out.println("Welcome to our car dealership. What would you like to do?");
-    System.out.println("Enter one of the following options: All Vechicles or Search Price");
+    System.out.println("Enter one of the following options: All Vechicles, Search Price, or Add Vehicle");
     String navigationChoice = c.readLine();
 
     if(navigationChoice.equals("All Vehicles")) {
@@ -38,7 +38,27 @@ public class App {
           System.out.println(v.mPrice);
         }
       }
-
+    } else if(navigationChoice.equals("Add Vehicle")) {
+      System.out.println("Great, let's add a vehicle! What year is your vehicle?");
+      int userVehicleYear = Integer.parseInt(c.readLine());
+      System.out.println("Great! What make or brand is the vehicle?");
+      String userVehicleBrand = c.readLine();
+      System.out.println("Got it! What model is it?");
+      String userVehicleModel = c.readLine();
+      System.out.println("And how many miles does it have on it?");
+      int userVehicleMiles = Integer.parseInt(c.readLine());
+      System.out.println("Finally, what's its price?");
+      int userVehiclePrice = Integer.parseInt(c.readLine());
+      Vehicle yourListing = new Vehicle(userVehicleYear, userVehicleBrand, userVehicleModel, userVehicleMiles, userVehiclePrice);
+      System.out.println("-------------------");
+      System.out.println("Thank you! Here is a sample of your listing:");
+      System.out.println("-------------------");
+      System.out.println(yourListing.mYear);
+      System.out.println(yourListing.mBrand);
+      System.out.println(yourListing.mModel);
+      System.out.println(yourListing.mMiles);
+      System.out.println(yourListing.mPrice);
+      System.out.println("-------------------");
     } else {
       System.out.println("I'm sorry, I didn't understand that input, please check your spelling.");
     }
