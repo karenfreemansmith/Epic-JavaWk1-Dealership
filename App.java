@@ -26,11 +26,11 @@ public class App {
       if(navigationChoice.equals("All Vehicles")) {
         for(Vehicle v:allVehicles) {
           System.out.println("-------------------");
-          System.out.println(v.mYear);
-          System.out.println(v.mBrand);
-          System.out.println(v.mModel);
-          System.out.println(v.mMiles);
-          System.out.println(v.mPrice);
+          System.out.println(v.getYear());
+          System.out.println(v.getBrand());
+          System.out.println(v.getModel());
+          System.out.println(v.getMiles());
+          System.out.println(v.getPrice());
         }
       } else if (navigationChoice.equals("Search Price")) {
         System.out.println("What is your maximum budget for a vehicle?");
@@ -39,11 +39,11 @@ public class App {
         for(Vehicle v:allVehicles) {
           if(v.worthBuying(userMaxBudget)) {
             System.out.println("-------------------");
-            System.out.println(v.mYear);
-            System.out.println(v.mBrand);
-            System.out.println(v.mModel);
-            System.out.println(v.mMiles);
-            System.out.println(v.mPrice);
+            System.out.println(v.getYear());
+            System.out.println(v.getBrand());
+            System.out.println(v.getModel());
+            System.out.println(v.getMiles());
+            System.out.println(v.getPrice());
           }
         }
       } else if(navigationChoice.equals("Add Vehicle")) {
@@ -62,11 +62,11 @@ public class App {
         System.out.println("-------------------");
         System.out.println("Thank you! Here is a sample of your listing:");
         System.out.println("-------------------");
-        System.out.println(yourListing.mYear);
-        System.out.println(yourListing.mBrand);
-        System.out.println(yourListing.mModel);
-        System.out.println(yourListing.mMiles);
-        System.out.println(yourListing.mPrice);
+        System.out.println(yourListing.getYear());
+        System.out.println(yourListing.getBrand());
+        System.out.println(yourListing.getModel());
+        System.out.println(yourListing.getMiles());
+        System.out.println(yourListing.getPrice());
         System.out.println("-------------------");
       } else {
         System.out.println("I'm sorry, I didn't understand that input, please check your spelling.");
